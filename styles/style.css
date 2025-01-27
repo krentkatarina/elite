@@ -227,6 +227,9 @@ body {
     object-fit: contain;
     max-width: 270px;
 }
+.play-arena__values {
+    width:240px
+}
 .play-arena__value {
     color: var(--main-color);
     font-size: 40px;
