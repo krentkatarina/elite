@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/volt.png">
+    <link rel="stylesheet" href="styles/nullstyle.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Elite 2.0</title>
+</head>
+<body>
+    <div class="game">
+        <div class="first-screen">
+            <div class="first-screen__header">
+                <div class="first-screen__logo">
+                    <img src="images/main-logo.png" alt="logo">
+                </div>
+                <p class="first-screen__desc">choose your blaster then shoot as many targets as you can within the time limit!</p>
+            </div>
+            <div class="first-screen__content">
+                <img src="/images/guns.png" alt="guns">
+            </div>
+            <div class="first-screen__buttons">
+                <div class="first-screen__buttons-row">
+                    <button id="choose-button" class="btn btn-orange">Play Minigame</button>
+                    <button id="open-video" class="btn btn-blue">Watch video</button>
+                </div>
+                <div class="first-screen__buttons-row">
+                    <button id="slider-button" class="btn btn-blue">view range</button>
+                    <a rel="noopener" href="https://nerf-pijltjes.nl/" target="_blank"  class="btn btn-blue">visit nerf</a>
+                </div>           
+            </div>
+        </div>
+        <div class="range inv">
+            <img class="light-1" src="images/light-1.png" alt="light">
+            <img class="light-2" src="images/light-2.png" alt="light">
+            <p class="range__desc">Swipe left and right to view the range!</p>
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img class="slide__image" src="images/echo.png" alt="echo">
+                    <div class="slide__info">
+                        <h2 class="slide__title">ELITE 2.0 ECHO</h2>
+                        <p class="slide__desc">Elite 2.0 echo has removable stock and barrel, with 4 configurations in one. fire 1 dart at a time or 10 darts rapidly. come with 24 nerf elite darts.</p> 
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="slide__image" src="images/commander.png" alt="commander">
+                    <div class="slide__info">
+                        <h2 class="slide__title">ELITE 2.0 COMMANDER</h2>
+                        <p class="slide__desc">Elite 2. 0 commander has a 6-dart rotating drum, 3 tactical rails and 2 stock attachmentsire. fire 1 dart or launch all 6 darts, with slam-fire action comes with 6 elite darts.</p>           
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="slide__image" src="images/shockwave.png" alt="shockwave">
+                    <div class="slide__info">
+                        <h2 class="slide__title">ELITE 2.0 SHOCKWAVE</h2>
+                        <p class="slide__desc">Elite 2.0 shockwave comes with 30 official nerf darts to fully load the 15-dart rotating drum. Unleash 1 dart, or slam-fire all 15 darts at once fires up to 90 feet.</p>   
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="slide__image" src="images/volt.png" alt="volt">
+                    <div class="slide__info">
+                        <h2 class="slide__title">ELITE 2.0 VOLT </h2>
+                        <p class="slide__desc">Elite 2.0 volt is equipped with 2 tactical rails and light beam targeting, reaching up to 15 feet. includes 6 official nerf darts and fires darts up to 90 feet. </p>   
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button id="back-slider" class="btn btn-blue">GO BACK</button>
+                <a rel="noopener" href="https://nerf-pijltjes.nl/" target="_blank" class="btn btn-orange">VISIT NERF</a>
+            </div>
+            <div class="buttons">
+                <button class="button" id="prev"><img src="images/icons/arrow-left.png" alt="arrow-left"></button>
+                <button class="button" id="next"><img src="images/icons/arrow-right.png" alt="arrow-right"></button>
+            </div>
+        </div>
+        <div class="game__choose inv">
+            <img class="light-1" src="images/light-1.png" alt="light">
+            <img class="light-2" src="images/light-2.png" alt="light">
+            <p class="range__desc">Choose your blaster then shoot the targets!</p>
+            <div class="slider" id="choose">
+                <div class="slide-choose">
+                    <img class="slide__image" src="images/echo.png" alt="echo">
+                    <div class="slide__name">ELITE 2.0 ECHO</div>
+                </div>
+                <div class="slide-choose">
+                    <img class="slide__image" src="images/commander.png" alt="commander">
+                    <div class="slide__name">ELITE 2.0 COMMANDER</div>
+                </div>
+                <div class="slide-choose">
+                    <img class="slide__image" src="images/shockwave.png" alt="shockwave">
+                    <div class="slide__name">ELITE 2.0 SHOCKWAVE</div>
+                </div>
+                <div class="slide-choose">
+                    <img class="slide__image" src="images/volt.png" alt="volt">
+                    <div class="slide__name">ELITE 2.0 VOLT </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button id="back-choose" class="btn btn-blue">GO BACK</button>
+                <div id="name" class="banner-name"></div>
+                <button id="play-button" class="btn btn-orange">Play game</button>
+            </div>
+            <div class="buttons">
+                <button class="button" id="prev-choose"><img src="images/icons/arrow-left.png" alt="arrow-left"></button>
+                <button class="button" id="next-choose"><img src="images/icons/arrow-right.png" alt="arrow-right"></button>
+            </div>
+        </div>
+
+        <div class="video-block inv">
+            <button class="btn-close" id="close-video"></button>
+            <video class="video-main" controls>
+                <source src="./video/HSNF0100000H.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="play-arena inv">
+            <div class="play-arena__row">
+                <div class="play-arena__logo">
+                    <img class="" src="images/main-logo.png" alt="logo">
+                </div>
+                <p class="play-arena__desc">Tap the targets to shoot as many as you can within the time limit!</p>
+                <div class="play-arena__values">
+                    <div class="play-arena__value">Time: <span id="time">20</span> secs</div>
+                    <div class="play-arena__value">Score: <span id="score">0</span></div>
+                </div>
+            </div>
+            <div class="play-arena__desk" id="game-container">
+                <div id="countdown" class="countdown"></div>
+            </div>
+        </div>
+        <div class="result inv">
+            <p class="result__desc">Awesome! Now Check Out The Video</p>
+            <div class="result__content">
+                <div class="result__content-left">
+                    <img class="result__content-image" src="" alt="gun">
+                    <p class="result__desc-score">Your score: <span class="result-score"></span></p>
+                </div>
+                <div class="result__content-right">
+                    <video class="video-result" controls>
+                        <source src="./video/HSNF0100000H.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button id="back-end" class="btn btn-blue">GO BACK</button>
+                <a rel="noopener" href="https://nerf-pijltjes.nl/" target="_blank" class="btn btn-orange">VISIT NERF</a>
+            </div>
+        </div>
+        <div id="overlay" class="inv"></div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
