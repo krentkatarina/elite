@@ -171,7 +171,7 @@ body {
     top: 10px;
 }
 .play-arena {
-    background: url('/images/bg.png') no-repeat 0 0 /cover;
+    background: url('../images/bg.png') no-repeat 0 0 /cover;
     height: 100%;
     position: relative;
 }
@@ -262,7 +262,7 @@ body {
 .result {
     position: relative;
     overflow: hidden;
-    background: url('/images/stand-bg.png') no-repeat 0 100%/cover;
+    background: url('../images/stand-bg.png') no-repeat 0 100%/cover;
     height: 100%;
 }
 .result__desc {
@@ -322,7 +322,7 @@ body {
 .game__choose {
     position: relative;
     overflow: hidden;
-    background: url('/images/stand-bg.png') no-repeat 0 100%/cover;
+    background: url('../images/stand-bg.png') no-repeat 0 100%/cover;
     height: 100%;
 }
 .light-1 {
@@ -378,7 +378,7 @@ body {
 }
 .range {
     position: relative;
-    background: url('/images/slider-bg.png') no-repeat 0 100%/cover;
+    background: url('../images/slider-bg.png') no-repeat 0 100%/cover;
     overflow: hidden;
     height: 100%;
 }
