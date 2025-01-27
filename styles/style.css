@@ -1,25 +1,25 @@
 @font-face {
     font-family: 'EurostileBold';
-    src: url('/fonts/EurostileBold.ttf') format('truetype');
+    src: url('../fonts/EurostileBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'EurostileExtended';
-    src: url('/fonts/EurostileExtended.ttf') format('truetype');
+    src: url('../fonts/EurostileExtended.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'EurostileOblique';
-    src: url('/fonts/EurostileOblique.ttf') format('truetype');
+    src: url('../fonts/EurostileOblique.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'EuroStyleNormal';
-    src: url('/fonts/EuroStyleNormal.ttf') format('truetype');
+    src: url('../fonts/EuroStyleNormal.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
