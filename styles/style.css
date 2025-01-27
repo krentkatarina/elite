@@ -368,6 +368,7 @@ body {
     position: absolute;
     bottom: 40px;
     left: 0;
+    display:none;
 }
 .slide-choose {
     min-width: 100%;
