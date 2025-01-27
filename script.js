@@ -53,15 +53,8 @@ const nameElement = document.getElementById('name');
 const slides = document.querySelectorAll('.slide');
 const slidesChoose = document.querySelectorAll('.slide-choose');
 
-let currentIndex = 1;
-let currentIndexChoose = 1;
-
-const cloneSlides = (sliderElement, slidesElement) => {
-    const firstClone = slidesElement[0].cloneNode(true);
-    const lastClone = slidesElement[slidesElement.length - 1].cloneNode(true);
-    sliderElement.appendChild(firstClone);
-    sliderElement.insertBefore(lastClone, slidesElement[0]);
-};
+let currentIndex = 0; 
+let currentIndexChoose = 0;
 
 const updateSlider = (sliderElement, currentIndex) => {
     sliderElement.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -72,72 +65,33 @@ const updateSliderChoose = () => {
     sliderChoose.style.transform = `translateX(-${currentIndexChoose * 100}%)`;
     sliderChoose.style.transition = 'transform 0.5s ease-in-out';
 
-    let slideIndex = (currentIndexChoose - 1 + slidesChoose.length) % slidesChoose.length;
+    let slideIndex = (currentIndexChoose + slidesChoose.length) % slidesChoose.length;
     const currentSlide = slidesChoose[slideIndex];
     const currentImage = currentSlide.querySelector('.slide__image');
-    selectedImageSrc = currentImage.src;
     const slideName = currentSlide.querySelector('.slide__name').textContent;
     nameElement.textContent = slideName;
 };
 
-cloneSlides(slider, slides);
-cloneSlides(sliderChoose, slidesChoose);
-
 prev.addEventListener('click', () => {
-    if (currentIndex === 0) {
-        currentIndex = slides.length - 1;
-        slider.style.transition = 'none';
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        setTimeout(() => {
-            slider.style.transition = 'transform 0.5s ease-in-out';
-        }, 0);
-    } else {
-        currentIndex--;
-    }
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     updateSlider(slider, currentIndex);
 });
 
 next.addEventListener('click', () => {
-    if (currentIndex === slides.length) {
-        currentIndex = 1;  // Перемещаем на второй слайд (без клонирования)
-        slider.style.transition = 'none';
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        setTimeout(() => {
-            slider.style.transition = 'transform 0.5s ease-in-out';
-        }, 0);
-    } else {
-        currentIndex++;
-    }
+    currentIndex = (currentIndex + 1) % slides.length;
     updateSlider(slider, currentIndex);
 });
 
 prevChoose.addEventListener('click', () => {
-    if (currentIndexChoose === 1) {
-        currentIndexChoose = slidesChoose.length;
-        sliderChoose.style.transition = 'none';
-        sliderChoose.style.transform = `translateX(-${currentIndexChoose * 100}%)`;
-        setTimeout(() => {
-            sliderChoose.style.transition = 'transform 0.5s ease-in-out';
-        }, 0);
-    } else {
-        currentIndexChoose--;
-    }
+    currentIndexChoose = (currentIndexChoose - 1 + slidesChoose.length) % slidesChoose.length;
     updateSliderChoose();
 });
 
 nextChoose.addEventListener('click', () => {
-    if (currentIndexChoose === slidesChoose.length) {
-        currentIndexChoose = 1;
-        sliderChoose.style.transition = 'none';
-        sliderChoose.style.transform = `translateX(-${currentIndexChoose * 100}%)`;
-        setTimeout(() => {
-            sliderChoose.style.transition = 'transform 0.5s ease-in-out';
-        }, 0);
-    } else {
-        currentIndexChoose++;
-    }
+    currentIndexChoose = (currentIndexChoose + 1) % slidesChoose.length;
     updateSliderChoose();
 });
+
 
 updateSliderChoose();
 
