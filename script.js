@@ -68,6 +68,7 @@ const updateSliderChoose = () => {
     let slideIndex = (currentIndexChoose + slidesChoose.length) % slidesChoose.length;
     const currentSlide = slidesChoose[slideIndex];
     const currentImage = currentSlide.querySelector('.slide__image');
+    selectedImageSrc = currentImage.src;
     const slideName = currentSlide.querySelector('.slide__name').textContent;
     nameElement.textContent = slideName;
 };
